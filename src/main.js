@@ -8,8 +8,8 @@ import lavagem_router from "./router/lavagem_router.js";
 const app = e();
 
 app.use(e.json());
-app.use("/", veiculo_router);
-app.use("/", cliente_router);
-app.use("/", funcionario_router);
-app.use("/", lavagem_router);
+app.use("/veiculo", veiculo_router);
+app.use("/cliente", cliente_router);
+app.use("/funcionario", funcionario_router);
+app.use("/lavagem", lavagem_router);
 app.listen(process.env.API_PORT, () => console.log("server running"));
